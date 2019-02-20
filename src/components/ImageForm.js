@@ -8,7 +8,7 @@ export default class ImageForm extends PureComponent {
     img: propTypes.string.isRequired
   };
   saveFile = () => {
-    fileSaver.saveAs(this.state.img);
+    fileSaver.saveAs(this.props.img);
   };
   render() {
     return (

@@ -17,12 +17,6 @@ export default class App extends PureComponent {
       console.log('hello');
     });
   };
-
-  // handleImage =({ target }) => {
-  //   this.setState({ [target.name]: target.value}, () => {
-  //     console.log('image has been targeted');
-  //   })
-  // }
   render() {
     const { text, img } = this.state;
     return (
