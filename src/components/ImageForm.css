@@ -14,7 +14,6 @@ img {
   letter-spacing: .03em;
 }
 .form {
-  margin-top: 100px;
   border: 1pt solid black;
   background: black;
 }
@@ -42,7 +41,7 @@ button {
   border: 1pt solid black;
   }
   .form {
-    margin-top: 50px;
+    margin-top: 0;
     background: transparent;
     border: none;
     background:black;
@@ -55,5 +54,11 @@ button {
   button {
     display: block;
     cursor: grabbing;
+  }
+  .footer, .title {
+    text-align: center;
+    margin: 0;
+    color: white;
+    letter-spacing: .03em;
   }
 }
