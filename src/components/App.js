@@ -14,7 +14,6 @@ export default class App extends PureComponent {
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value }, () => {
-      console.log('hello');
     });
   };
   render() {
