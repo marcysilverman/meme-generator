@@ -3,3 +3,14 @@
 * {
   font-family: 'Anton', sans-serif;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url(http://images5.fanpop.com/image/photos/30200000/Meme-Wallpaper-memes-30218751-1366-768.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
