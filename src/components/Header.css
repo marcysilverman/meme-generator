@@ -53,4 +53,17 @@
     letter-spacing: .04em;
     font-size: 25px;
   }
+  h1 {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    -webkit-text-stroke: .2pt;
+    -webkit-text-fill-color: red;
+    letter-spacing: .04em;
+    background: black;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
