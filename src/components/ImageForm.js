@@ -1,19 +1,35 @@
 import React, { PureComponent } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import fileSaver from 'file-saver';
-
+import styles from './App.css';
+import domToImage from 'dom-to-image';
 
 export default class ImageForm extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.imageRef = React.createRef();
+  }
   static propTypes = {
-    img: propTypes.string.isRequired
+    img: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    footer: PropTypes.string.isRequired
   };
+
   saveFile = () => {
-    fileSaver.saveAs(this.props.img);
+    event.preventDefault();
+    domToImage.toPng(this.imageRef.current)
+      .then(img => {
+        fileSaver.saveAs(img);
+      });
   };
   render() {
     return (
     <>
-    <img src={this.props.img} />
+     <div ref={this.imageRef}>
+       <h2 className={styles.h2}> {this.props.text} </h2>
+       <img src={this.props.img}></img>
+       <h2 className={styles.h2}> {this.props.footer} </h2> 
+     </div>
     <button onClick={this.saveFile}>Save File</button>
     </>
     );

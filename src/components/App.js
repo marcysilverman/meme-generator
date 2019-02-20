@@ -4,27 +4,24 @@ import ImageForm from './ImageForm';
 
 
 export default class App extends PureComponent {
+
   state = {
     text: '',
-    img: ''
+    img: '',
+    footer: ''
   }
-  handleClick = () => {
-    console.log('button has been clicked');
-  }
-  
+
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value }, () => {
       console.log('hello');
     });
   };
   render() {
-    const { text, img } = this.state;
+    const { text, img, footer } = this.state;
     return (
-    <>
-    { img && <ImageForm img={img}/>}
-    <HeaderDisplay text={text}  onChange={this.handleChange} />
-    <h2> {text} </h2>
-    <button onClick={this.handleClick}> CLICK ME </button>
+      <>
+      <HeaderDisplay onChange={this.handleChange} />
+      {img && <ImageForm text={text} footer={footer} img={img}/>}
     </>
     );
   }
