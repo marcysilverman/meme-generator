@@ -1,8 +1,12 @@
 import React, { PureComponent } from 'react';
 import HeaderDisplay from './HeaderDisplay';
+import ImageForm from './ImageForm';
+
+
 export default class App extends PureComponent {
   state = {
-    text: ''
+    text: '',
+    img: ''
   }
   handleClick = () => {
     console.log('button has been clicked');
@@ -13,12 +17,18 @@ export default class App extends PureComponent {
       console.log('hello');
     });
   };
+
+  // handleImage =({ target }) => {
+  //   this.setState({ [target.name]: target.value}, () => {
+  //     console.log('image has been targeted');
+  //   })
+  // }
   render() {
-    const { text } = this.state;
+    const { text, img } = this.state;
     return (
     <>
+    { img && <ImageForm img={img}/>}
     <HeaderDisplay text={text}  onChange={this.handleChange} />
-    <img src="https://pics.me.me/when-you-see-a-surprised-pikachu-meme-in-4k-woww-37497086.png"/>
     <h2> {text} </h2>
     <button onClick={this.handleClick}> CLICK ME </button>
     </>
