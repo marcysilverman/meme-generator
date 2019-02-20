@@ -1,4 +1,5 @@
-h2 {
-  background: black;
-  color: white;
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+* {
+  font-family: 'Anton', sans-serif;
 }

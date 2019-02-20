@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import HeaderDisplay from './HeaderDisplay';
 import ImageForm from './ImageForm';
+import styles from './App.css';
 
 
 export default class App extends PureComponent {
@@ -20,8 +21,8 @@ export default class App extends PureComponent {
     const { text, img, footer } = this.state;
     return (
       <>
-      <HeaderDisplay onChange={this.handleChange} />
-      {img && <ImageForm text={text} footer={footer} img={img}/>}
+      <HeaderDisplay className={styles} onChange={this.handleChange} />
+      {img && <ImageForm text={text} className={styles} footer={footer} img={img}/>}
     </>
     );
   }

@@ -1,0 +1,26 @@
+@media screen and (min-width: 375px) {
+  h1 {
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+  }
+  .display {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  input {
+    width: 50%;
+    border: 1pt solid black;
+    text-align: center;
+    height: 30px;
+  }
+  input:hover {
+   color: white;
+   background: black;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+}
