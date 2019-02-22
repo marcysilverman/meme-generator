@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styles from './Header.css';
+import styles from './css/Header.css';
 
 function HeaderDisplay({ text, onChange, img, footer }) {
   return (

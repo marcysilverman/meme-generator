@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import HeaderDisplay from './HeaderDisplay';
 import ImageForm from './ImageForm';
-import styles from './App.css';
+import styles from './css/App.css';
 
 
 export default class App extends PureComponent {
