@@ -11,7 +11,7 @@ export default class ImageForm extends PureComponent {
   }
   static propTypes = {
     img: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired,
     footer: PropTypes.string.isRequired
   };
 
@@ -26,7 +26,7 @@ export default class ImageForm extends PureComponent {
     return (
     <>
       <div className={styles.form} ref={this.imageRef}>
-        <h3 className={styles.title}> {this.props.text} </h3>
+        <h3 className={styles.title}> {this.props.header} </h3>
         <img src={this.props.img}></img>
         <h3 className={styles.footer}> {this.props.footer} </h3> 
       </div>
